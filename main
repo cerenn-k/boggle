@@ -1,0 +1,36 @@
+dosya = open("C:/Users/HP/Desktop/kelimeler.txt", "r", encoding="utf-8")
+kelimeler = dosya.read().splitlines()
+
+frekans = {}
+
+print(type(kelimeler))
+for kelime in kelimeler:
+    for char in kelime:
+
+        if char in frekans:
+            frekans[char] +=1
+        else:
+            frekans[char] = 1
+print(frekans)
+---------------------------------------------------
+from random import shuffle
+
+def get_harf():
+    setler={}
+    setler['0']=['a','e','i','n','y','ö']
+    setler['1']=['e','b','k','a','l','t']
+    setler['2']=['l','d','r','u','a','z']
+    setler['3']=['o','c','i','n','e','f']
+    setler['4']=['m','a','ı','ş','a','e']
+    setler['5']=['a','g','s','e','i','r']
+    setler['6']=['m','v','y','p','a','l']
+    setler['7']=['d','ğ','ü','i','a','r']
+    setler['8']=['t','i','r','i','m','o']
+    setler['9']=['z','k','n','l','a','l']
+    setler['10']=['u','ş','a','d','t','s']
+    setler['11']=['v','y','ö','j','h','e']
+    setler['12']=['u','ğ','p','z','e','ü']
+    setler['13']=['b','a','ı','c','a','n']
+    setler['14']=['k','j','ö','e','r','l']
+    setler['15']=['t','y','i','e','h','d']
+    spent_setler = []
